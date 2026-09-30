@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stevoh AI Studio</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #070b14;
+      color: white;
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #1d2940;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #55b8ff;
+    }
+
+    main {
+      max-width: 700px;
+      margin: auto;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    h1 span {
+      color: #55b8ff;
+    }
+
+    .subtitle {
+      color: #aeb8c8;
+      line-height: 1.6;
+      margin-bottom: 35px;
+    }
+
+    .studio {
+      background: #101827;
+      border: 1px solid #26344d;
+      border-radius: 18px;
+      padding: 25px;
+      text-align: left;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 150px;
+      padding: 15px;
+      border-radius: 12px;
+      border: 1px solid #34445f;
+      background: #080d17;
+      color: white;
+      font-size: 16px;
+      resize: vertical;
+      outline: none;
+    }
+
+    textarea:focus {
+      border-color: #55b8ff;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 15px;
+      padding: 15px;
+      border: none;
+      border-radius: 12px;
+      background: #168cff;
+      color: white;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0075e8;
+    }
+
+    #message {
+      margin-top: 15px;
+      color: #8ed0ff;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      color: #6f7c90;
+      padding: 30px 20px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">STEVOH AI STUDIO</div>
+</header>
+
+<main>
+
+  <h1>Create with <span>Artificial Intelligence</span></h1>
+
+  <p class="subtitle">
+    Turn your ideas into powerful AI-generated content.
+    Describe what you want to create and let Stevoh AI Studio bring your idea to life.
+  </p>
+
+  <div class="studio">
+
+    <label for="prompt">What do you want to create?</label>
+
+    <textarea
+      id="prompt"
+      placeholder="Describe your idea here..."
+    ></textarea>
+
+    <button onclick="generateContent()">
+      Generate
+    </button>
+
+    <div id="message"></div>
+
+  </div>
+
+</main>
+
+<footer>
+  © 2026 Stevoh AI Studio. All rights reserved.
+</footer>
+
+<script>
+  function generateContent() {
+    const prompt = document.getElementById("prompt").value.trim();
+    const message = document.getElementById("message");
+
+    if (prompt === "") {
+      message.textContent = "Please enter a prompt first.";
+      return;
+    }
+
+    message.textContent = "Stevoh AI Studio is ready. AI generation will be connected next.";
+  }
+</script>
+
+</body>
+</html>
